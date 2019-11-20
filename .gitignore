@@ -1,0 +1,5 @@
+config-map-aws-auth_hosono-test-eks.yaml
+kubeconfig_hosono-test-eks
+terraform.tfstate
+terraform.tfstate.backup
+.terraform
