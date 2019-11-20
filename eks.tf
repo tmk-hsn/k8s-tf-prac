@@ -2,13 +2,7 @@ locals {
   cluster_name = "hosono-test-eks"
   worker_groups = [
     {
-      instance_type       = "m5.large"
-      asg_max_size  = 5
-      tags = [{
-        key                 = "foo"
-        value               = "bar"
-        propagate_at_launch = true
-      }]
+      instance_type = "m5.large"
     },
   ]
   tags = {

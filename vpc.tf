@@ -1,5 +1,5 @@
 resource "aws_security_group" "all_worker_mgmt" {
-  name_prefix = "all_worker_management"
+  name_prefix = "hosono-test-sg"
   vpc_id      = module.vpc.vpc_id
 
   ingress {
@@ -17,7 +17,7 @@ resource "aws_security_group" "all_worker_mgmt" {
 
 module "vpc" {
   source               = "terraform-aws-modules/vpc/aws"
-  name                 = "test-vpc"
+  name                 = "hosono-test-vpc"
   cidr                 = "10.0.0.0/16"
   azs                  = ["ap-northeast-1a", "ap-northeast-1c"]
   private_subnets      = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
